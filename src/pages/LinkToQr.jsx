@@ -1,5 +1,6 @@
 import { useState } from "react";
 import QrArea from "../components/QrArea";
+import styles from "../styles/LinkToQr.module.css";
 
 const LinkToQr = () => {
   const [url, setUrl] = useState("");
@@ -34,11 +35,13 @@ const LinkToQr = () => {
       : url;
 
   return (
-    <div>
+    <div className={styles.container}>
+      <div>
       <h2>Website URL</h2>
       <p>Create a QR code that directs to any website or web page.</p>
 
       <input
+        className={styles.inputs}
         type="url"
         placeholder="https://example.com"
         value={url}
@@ -50,8 +53,8 @@ const LinkToQr = () => {
           {error}
         </p>
       )}
-
-      <QrArea data={qrData} />
+      </div>
+      <div><QrArea data={qrData} /></div>
     </div>
   );
 };

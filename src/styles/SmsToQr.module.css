@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.inputs {
+    display: block;
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+}

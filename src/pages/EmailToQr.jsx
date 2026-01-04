@@ -1,5 +1,6 @@
 import { useState } from "react";
 import QrArea from "../components/QrArea";
+import styles from "../styles/EmailToQr.module.css";
 
 const EmailToQr = () => {
   const [email, setEmail] = useState("");
@@ -36,11 +37,14 @@ const EmailToQr = () => {
       : `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
   return (
-    <div>
+    <div className={styles.container}>
+
+      <div>
       <h2>Email Composition</h2>
       <p>Create a QR code that opens a pre-filled email composition.</p>
 
       <input
+        className={styles.inputs}
         type="email"
         placeholder="Email address"
         value={email}
@@ -48,6 +52,7 @@ const EmailToQr = () => {
       />
 
       <input
+      className={styles.inputs}
         type="text"
         placeholder="Subject (optional)"
         value={subject}
@@ -65,8 +70,9 @@ const EmailToQr = () => {
           {error}
         </p>
       )}
-
-      <QrArea data={qrData} />
+      </div>
+      <div><QrArea data={qrData} /></div>
+      
     </div>
   );
 };

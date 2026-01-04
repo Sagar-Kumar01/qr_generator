@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  align-items: center;
+    justify-content: space-around;
+  padding: 20px;
+}
+.inputs {
+  display: block;
+  margin-bottom: 10px;
+  padding: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}

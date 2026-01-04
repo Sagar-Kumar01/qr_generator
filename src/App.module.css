@@ -1,0 +1,48 @@
+
+.container h1 {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  text-align: center;
+}
+
+.container p {
+  text-align: center;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 40px;
+
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+
+nav a {
+  display: flex;
+  color: black;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 15px;
+  border: 1px solid transparent;
+}
+
+nav a:hover {
+  scale: 1.5;
+}
+
+.active {
+  scale: 1.2;
+  border: 1px solid black;
+}

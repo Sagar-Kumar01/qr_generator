@@ -1,5 +1,6 @@
 import { useState } from "react";
 import QrArea from "../components/QrArea";
+import styles from "../styles/LocationToQr.module.css";
 
 const LocationToQr = () => {
   const [lat, setLat] = useState("");
@@ -47,11 +48,13 @@ const LocationToQr = () => {
       : `geo:${lat},${lng}`;
 
   return (
-    <div>
+    <div className={styles.container}>
+      <div>
       <h2>GPS Location</h2>
       <p>Share GPS coordinates that open in mapping applications.</p>
 
       <input
+        className={styles.inputs}
         type="number"
         step="any"
         placeholder="Latitude (e.g. 28.6139)"
@@ -60,6 +63,7 @@ const LocationToQr = () => {
       />
 
       <input
+      className={styles.inputs}
         type="number"
         step="any"
         placeholder="Longitude (e.g. 77.2090)"
@@ -72,8 +76,8 @@ const LocationToQr = () => {
           {error}
         </p>
       )}
-
-      <QrArea data={qrData} />
+      </div>
+      <div><QrArea data={qrData} /></div>
     </div>
   );
 };

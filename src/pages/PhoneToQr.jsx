@@ -1,5 +1,6 @@
 import { useState } from "react";
 import QrArea from "../components/QrArea";
+import styles from "../styles/PhoneToQr.module.css";
 
 const PhoneToQr = () => {
   const [phone, setPhone] = useState("");
@@ -31,11 +32,13 @@ const PhoneToQr = () => {
   const qrData = error || !phone ? "" : `tel:${phone}`;
 
   return (
-    <div>
+    <div className={styles.container}>
+      <div>
       <h2>Phone Number</h2>
       <p>Create a QR code for instant phone dialing.</p>
 
       <input
+        className={styles.inputs}
         type="tel"
         placeholder="Enter phone number"
         value={phone}
@@ -43,8 +46,10 @@ const PhoneToQr = () => {
       />
 
       {error && <p style={{ color: "red", fontSize: "14px" }}>{error}</p>}
+      </div>
 
-      <QrArea data={qrData} />
+      <div><QrArea data={qrData} /></div>
+
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import QrArea from "../components/QrArea";
+import styles from "../styles/ContactToQr.module.css";
 
 const ContactToQr = () => {
   const [firstName, setFirstName] = useState("");
@@ -12,7 +13,7 @@ const ContactToQr = () => {
   const [error, setError] = useState("");
   const [vCard, setVCard] = useState("");
 
-  // ✅ Validation + vCard generation (side-effect)
+  
   useEffect(() => {
     // Validation
     if (!firstName && !lastName) {
@@ -44,23 +45,28 @@ END:VCARD`;
   }, [firstName, lastName, phone, email, org, website]);
 
   return (
-    <div>
+    <div className={styles.container}>
+
+      <div>
       <h2>Contact Information (vCard)</h2>
       <p>Create a digital business card that can be saved to phone contacts.</p>
 
       <input
+      className={styles.inputs}
         placeholder="First Name"
         value={firstName}
         onChange={(e) => setFirstName(e.target.value)}
       />
 
       <input
+      className={styles.inputs}
         placeholder="Last Name"
         value={lastName}
         onChange={(e) => setLastName(e.target.value)}
       />
 
       <input
+      className={styles.inputs}
         type="tel"
         placeholder="Phone (optional)"
         value={phone}
@@ -68,6 +74,7 @@ END:VCARD`;
       />
 
       <input
+      className={styles.inputs}
         type="email"
         placeholder="Email (optional)"
         value={email}
@@ -75,12 +82,14 @@ END:VCARD`;
       />
 
       <input
+      className={styles.inputs}
         placeholder="Organization (optional)"
         value={org}
         onChange={(e) => setOrg(e.target.value)}
       />
 
       <input
+      className={styles.inputs}
         placeholder="Website (optional)"
         value={website}
         onChange={(e) => setWebsite(e.target.value)}
@@ -92,7 +101,8 @@ END:VCARD`;
         </p>
       )}
 
-      <QrArea data={vCard} />
+      </div>
+      <div> <QrArea data={vCard} /> </div>
     </div>
   );
 };

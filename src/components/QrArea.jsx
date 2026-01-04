@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import QRCode from "qrcode";
-import "./QrArea.css";
+import styles from "./QrArea.module.css";
 
 const QrArea = ({ data }) => {
   const canvasRef = useRef(null);
@@ -43,13 +43,13 @@ const QrArea = ({ data }) => {
   };
 
   return (
-    <div className="qrContener">
+    <div className={styles.qrArea}>
       <h1>Live Preview</h1>
       <p>Real-time QR code generation with instant updates</p>
       <canvas ref={canvasRef} />
 
       {/* Controls */}
-      <div style={{ marginTop: "10px" }}>
+      <div className={styles.controls}>
         <label>
           QR Color:
           <input
@@ -59,7 +59,7 @@ const QrArea = ({ data }) => {
           />
         </label>
 
-        <label style={{ marginLeft: "10px" }}>
+        <label>
           Background:
           <input
             type="color"
