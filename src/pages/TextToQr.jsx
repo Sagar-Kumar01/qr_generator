@@ -7,12 +7,12 @@ const TextToQr = () => {
 
   return (
     <div>
-      <h2>Text to QR</h2>
-      <input
-        type="text"
-        placeholder="write sort message..."
-        onChange={(e) => setText(e.target.value)}
+      <h2>Plain Text QR Code</h2>
+      <p>Generate a QR code containing any text content. Perfect for messages, codes, or instructions.</p>
+      <textarea
+        placeholder="Text message..."
         value={text}
+        onChange={(e) => setText(e.target.value)}
       />
       <QrArea data={text} />
     </div>

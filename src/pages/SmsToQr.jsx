@@ -12,7 +12,8 @@ const SmsToQr = () => {
 
   return (
     <div>
-      <h2>SMS to QR</h2>
+      <h2>SMS Message</h2>
+      <p>Generate a QR code for sending pre-filled text messages.</p>
 
       <input
         type="tel"

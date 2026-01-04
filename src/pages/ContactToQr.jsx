@@ -45,7 +45,8 @@ END:VCARD`;
 
   return (
     <div>
-      <h2>Contact to QR</h2>
+      <h2>Contact Information (vCard)</h2>
+      <p>Create a digital business card that can be saved to phone contacts.</p>
 
       <input
         placeholder="First Name"

@@ -35,7 +35,8 @@ const LinkToQr = () => {
 
   return (
     <div>
-      <h2>Link to QR</h2>
+      <h2>Website URL</h2>
+      <p>Create a QR code that directs to any website or web page.</p>
 
       <input
         type="url"

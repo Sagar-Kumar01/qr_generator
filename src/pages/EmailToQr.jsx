@@ -37,7 +37,8 @@ const EmailToQr = () => {
 
   return (
     <div>
-      <h2>Email to QR</h2>
+      <h2>Email Composition</h2>
+      <p>Create a QR code that opens a pre-filled email composition.</p>
 
       <input
         type="email"

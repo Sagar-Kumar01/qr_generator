@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import QRCode from "qrcode";
+import "./QrArea.css";
 
 const QrArea = ({ data }) => {
   const canvasRef = useRef(null);
@@ -42,7 +43,9 @@ const QrArea = ({ data }) => {
   };
 
   return (
-    <div>
+    <div className="qrContener">
+      <h1>Live Preview</h1>
+      <p>Real-time QR code generation with instant updates</p>
       <canvas ref={canvasRef} />
 
       {/* Controls */}

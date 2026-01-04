@@ -48,7 +48,8 @@ const LocationToQr = () => {
 
   return (
     <div>
-      <h2>Location to QR</h2>
+      <h2>GPS Location</h2>
+      <p>Share GPS coordinates that open in mapping applications.</p>
 
       <input
         type="number"

@@ -14,7 +14,8 @@ const WifiToQr = () => {
 
   return (
     <div>
-      <h2>Wi-Fi to QR</h2>
+      <h2>WiFi Network Sharing</h2>
+      <p>Allow others to connect to your WiFi network by scanning the QR code.</p>
 
       <input
         type="text"

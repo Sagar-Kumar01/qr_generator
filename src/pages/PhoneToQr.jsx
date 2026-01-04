@@ -32,7 +32,8 @@ const PhoneToQr = () => {
 
   return (
     <div>
-      <h2>Phone to QR</h2>
+      <h2>Phone Number</h2>
+      <p>Create a QR code for instant phone dialing.</p>
 
       <input
         type="tel"
