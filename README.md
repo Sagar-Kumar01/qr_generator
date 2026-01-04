@@ -82,7 +82,7 @@ src/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Sagar-Kumar01/qr_generator.git
    cd qr_generator
    ```
 
